@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'WelcomeController@home');
+Route::get('home', 'WelcomeController@home');
+Route::get('profile-{name}-{surname}-{id}', 'WelcomeController@profile');
+Route::get('rank', 'WelcomeController@rank');
